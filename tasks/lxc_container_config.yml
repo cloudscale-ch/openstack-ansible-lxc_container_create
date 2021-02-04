@@ -208,6 +208,7 @@
     - lxc_container_veth_wiring | bool
     - item.value.interface is defined
     - item.value.type is not defined or item.value.type == 'veth'
+    - not skip_container_veth_wiring | bool
   failed_when: wiring_script.rc not in [3, 0]
   changed_when: wiring_script.rc == 3
   delegate_to: "{{ physical_host }}"
